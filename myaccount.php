@@ -73,8 +73,10 @@
 	<script>
 		function toggleDarkMode() {
 			var body = document.querySelector("body");
-			body.classList.toggle("dark");
+			var isDark = body.classList.contains("dark");
+			body.classList.toggle("dark", !isDark);
 		}
+
 
 		function updateTime() {
 			var timeElem = document.querySelector("#time");
